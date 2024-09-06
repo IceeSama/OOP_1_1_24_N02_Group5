@@ -1,5 +1,5 @@
 // Giao diện tín hiệu chung
-interface Signal {
+interface signal {
     // Phương thức khởi tạo tín hiệu
     void initialize();
     
@@ -11,7 +11,7 @@ interface Signal {
     }
     
     // Lớp tín hiệu rời rạc kế thừa giao diện Signal
-    class DiscreteSignal implements Signal {
+    class DiscreteSignal implements signal {
     private int[] values; // Lưu trữ giá trị rời rạc
     
     // Khởi tạo tín hiệu rời rạc với các giá trị
@@ -42,7 +42,7 @@ interface Signal {
     }
     
     // Lớp tín hiệu liên tục kế thừa giao diện Signal
-    class ContinuousSignal implements Signal {
+    class ContinuousSignal implements signal {
     private double frequency; // Tần số tín hiệu
     
     // Khởi tạo tín hiệu liên tục với tần số
@@ -65,24 +65,5 @@ interface Signal {
     @Override
     public void displayInfo() {
     System.out.println("Continuous Signal Frequency: " + frequency + " Hz");
-    }
-    }
-    
-    // Lớp chính để kiểm thử các tín hiệu
-    public class main {
-    public static void main(String[] args) {
-    // Tạo tín hiệu rời rạc với các giá trị
-    int[] discreteValues = {1, 0, 1, 0, 1};
-    DiscreteSignal discreteSignal = new DiscreteSignal(discreteValues);
-    discreteSignal.initialize();
-    discreteSignal.analyze();
-    discreteSignal.displayInfo();
-    
-    // Tạo tín hiệu liên tục với tần số
-    double continuousFrequency = 50.0;
-    ContinuousSignal continuousSignal = new ContinuousSignal(continuousFrequency);
-    continuousSignal.initialize();
-    continuousSignal.analyze();
-    continuousSignal.displayInfo();
     }
     }
