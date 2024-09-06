@@ -69,7 +69,7 @@ interface Signal {
     }
     
     // Lớp chính để kiểm thử các tín hiệu
-    public class Main {
+    public class main {
     public static void main(String[] args) {
     // Tạo tín hiệu rời rạc với các giá trị
     int[] discreteValues = {1, 0, 1, 0, 1};
