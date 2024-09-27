@@ -1,22 +1,18 @@
 @Controller
 public class MovieController {
+
     @Autowired
     private MovieService movieService;
-    
-    @Autowired
-    private ScheduleService scheduleService;
 
-    @GetMapping("/")
-    public String viewMovies(Model model) {
+    @GetMapping("/movies")
+    public String getMovies(Model model) {
         model.addAttribute("movies", movieService.getAllMovies());
-        return "index";
+        return "movies/index";
     }
 
     @GetMapping("/movie/{id}")
-    public String viewMovieDetail(@PathVariable("id") Integer id, Model model) {
-        Movie movie = movieService.getMovieById(id);
-        model.addAttribute("movie", movie);
-        model.addAttribute("schedules", scheduleService.getSchedulesByMovieId(id));
-        return "movie-detail";
+    public String getMovieDetail(@PathVariable("id") Integer id, Model model) {
+        model.addAttribute("movie", movieService.getMovieById(id));
+        return "movies/detail";
     }
 }
