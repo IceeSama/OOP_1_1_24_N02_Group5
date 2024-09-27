@@ -1,16 +1,16 @@
 @Entity
-@Table(name = "seats")
 public class Seat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer seatId;
 
-    private Integer seatType;
+    private String seatType;
     private String row;
-    private Integer number;
+    private String number;
+    private boolean isBooked;
 
     @ManyToOne
-    @JoinColumn(name = "room_id", nullable = false)
+    @JoinColumn(name = "room_id")
     private Room room;
 
     // Getters and setters

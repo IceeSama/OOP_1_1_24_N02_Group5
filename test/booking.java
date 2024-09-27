@@ -1,5 +1,4 @@
 @Entity
-@Table(name = "booking")
 public class Booking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,8 +16,8 @@ public class Booking {
     @JoinColumn(name = "seat_id", nullable = false)
     private Seat seat;
 
-    private Double price;
-    private Integer seatStatus;
+    private double price;
+    private int seatStatus;
 
     // Getters and setters
 }

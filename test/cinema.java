@@ -1,5 +1,4 @@
 @Entity
-@Table(name = "cinemas")
 public class Cinema {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

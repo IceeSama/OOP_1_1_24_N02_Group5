@@ -1,5 +1,4 @@
 @Entity
-@Table(name = "movies")
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -10,8 +9,8 @@ public class Movie {
     private String movieTrailer;
     private String movieCens;
     private String movieGenres;
-    private LocalDate movieRelease;
-    private LocalTime movieLength;
+    private Date movieRelease;
+    private Time movieLength;
     private String movieFormat;
     private String moviePoster;
 

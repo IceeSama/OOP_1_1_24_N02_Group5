@@ -1,5 +1,4 @@
 @Entity
-@Table(name = "schedule")
 public class Schedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,9 +12,9 @@ public class Schedule {
     @JoinColumn(name = "room_id", nullable = false)
     private Room room;
 
-    private LocalDate scheduleDate;
-    private LocalTime scheduleStart;
-    private LocalTime scheduleEnd;
+    private Date scheduleDate;
+    private Time scheduleStart;
+    private Time scheduleEnd;
 
     // Getters and setters
 }
