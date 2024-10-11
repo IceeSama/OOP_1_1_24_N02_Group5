@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/style_menu.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/phimtheongay.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="container">
+        <nav class="navbar">
+            <div class="b1">
+                <a href="main.html"><i style="color: var(--orange-color);" class="fa-solid fa-play"> VCC</i></a>
+                <div>
+                    <p>TRUNG TÂM CHIẾU PHIM VIỆT NAM</p>
+                    <p></p>Vietnam Cinema Center</p>
+                </div>
+            </div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-items"><button class="btregister">Đăng ký</button></li>
+                    <li class="nav-items"><button class="btlogin">Đăng nhập</button></li>
+                </ul>
+            </div>
+            <!-- modal dangky -->
+            <div class="modaldangky">
+                <div class="modaldangky__overlay"></div>
+                <div class="modaldangky__body">
+                    <div class="dangky">
+                        <div class="dangky__container">
+                            <div class="dangky__header">
+                                <h3 class="dangky__heading">Đăng Ký</h3>
+                                <span class="btclosedangky" id="escape-button"><i class="fa-solid fa-x" class="form__heading"></i></span>
+                            </div>
+                            <div class="dangky__groupname">
+                                <div class="dangky__firstname">
+                                    <label for="Họ">Họ</label>
+                                    <input type="text" class="dangky__input" placeholder="Họ">
+                                </div>
+                                <div class="dangky__lastname">
+                                    <label for="Tên">Tên</label>
+                                    <input type="text" class="dangky__input" placeholder="Tên">
+                                </div>
+                            </div>
+                            <div class="dangky__account">
+                                <label for="Tên tài khoản">Tên tài khoản</label>
+                                <input type="text" class="dangky__input" placeholder="Tên tài khoản">
+                            </div>
+                            <div class="dangky__information">
+                                <label for="Số điện thoại">Số điện thoại</label>
+                                <input type="text" class="dangky__input" placeholder="Số điện thoại">
+                                <label for="Email">Email</label>
+                                <input type="text" class="dangky__input" placeholder="Email">
+                            </div>
+                            <div class="dangky__grouppassword">
+                                <div class="dangky__password">
+                                    <label for="Mật khẩu">Mật khẩu</label>
+                                    <input type="password" class="dangky__input" placeholder="Mật khẩu">
+                                </div>
+                                <div class="dangky__passwordagain">
+                                    <label for="Xác nhận mật khẩu">Xác nhận mật khẩu</label>
+                                    <input type="password" class="dangky__input" placeholder="Xác nhận mật khẩu">
+                                </div>
+                            </div>
+                            <div class="dangky__button">
+                                <button id="button">Đăng ký</button>
+                            </div>
+                            <div class="dangky__footer">
+                                <p>Bạn đã có tài khoản? <a href="">Đăng nhập</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal dangnhap -->
+            <div class="modaldangnhap">
+                <div class="modaldangnhap__overlay"></div>
+                <div class="modaldangnhap__body">
+                    <div class="dangnhap__container">
+                        <div class="dangnhap__header">
+                            <h3 class="dangnhap__heading">Đăng nhập</h3>
+                            <span class="btclosedangnhap"><i class="fa-solid fa-x"></i></span>
+                        </div>
+                        <div class="dangnhap__email">
+                            <label for="Email">Email</label>
+                            <input class="dangnhap__input" type="text" placeholder="Email">
+                        </div>
+                        <div class="dangnhap__password">
+                            <label for="Mật khẩu">Mật khẩu</label>
+                            <input class="dangnhap__input" type="password" placeholder="Mật khẩu">
+                        </div>
+                        <div class="dangnhap__forgetpassword">
+                            <a href="">Quên mật khẩu?</a>
+                        </div>
+                        <div class="dangnhap__button">
+                            <button id="button">Đăng nhập</button>
+                        </div>
+                        <div class="dangnhap__footer">
+                            <p>Bạn chưa có tài khoản?<a href="">Đăng ký</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./asset/img/1.png" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/2.png" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/3.png" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/4.png" alt="Image 4">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/5.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/6.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/7.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/8.png" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./asset/img/9.png" alt="">
+                </div>
+            </div>
+            <div class="navigation">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+        <div class="status">
+            <div class="phimdangchieu">
+                <span class="status-dot"></span>
+                <h1>Phim đang chiếu</h1>
+            </div>
+            <div class="xemtatca">
+                <a href="./phimtheongay/09-06-2024.html">Xem tất cả</a>
+            </div>
+        </div>
+        <div id="bd1">
+            <input type="radio" name="bd1" id="s1" checked>
+            <input type="radio" name="bd1" id="s2" checked>
+            <input type="radio" name="bd1" id="s3" checked>
+            <input type="radio" name="bd1" id="s4" checked>
+            <input type="radio" name="bd1" id="s5" checked>
+            <input type="radio" name="bd1" id="s6" checked>
+            <input type="radio" name="bd1" id="s7" checked>
+            <input type="radio" name="bd1" id="s8" checked>
+            <input type="radio" name="bd1" id="s9" checked>
+            <label for="s1" id="slide1">
+                <img src="./asset/img/i1.png" alt="">
+            </label>
+            <label for="s2" id="slide2">
+                <img src="./asset/img/i2.png" alt="">
+            </label>
+            <label for="s3" id="slide3">
+                <img src="./asset/img/i3.png" alt="">
+            </label>
+            <label for="s4" id="silde4">
+                <img src="./asset/img/i4.png" alt="">
+            </label>
+            <label for="s5" id="slide5">
+                <img src="./asset/img/i5.png" alt="">
+            </label>
+            <label for="s6" id="slide6">
+                <img src="./asset/img/i6.png" alt="">
+            </label>
+            <label for="s7" id="slide7">
+                <img src="./asset/img/i7.png" alt="">
+            </label>
+            <label for="s8" id="slide8">
+                <img src="./asset/img/i8.png" alt="">
+            </label>
+            <label for="s9" id="slide9">
+                <img src="./asset/img/i9.png" alt="">
+            </label>
+        </div>
+        <div class="status">
+            <div class="phimdangchieu">
+                <span class="status-dot"></span>
+                <h1>Phim sắp chiếu</h1>
+            </div>
+        </div>
+        <div class="bd2">
+            <div class="film">
+                <img src="./asset/img/im2.png" alt="">
+                <p class="text">GIA TÀI CỦA NGOẠI</p>
+            </div>
+            <div class="film">
+                <img src="./asset/img/im3.png" alt="">
+                <p class="text">MÓNG VUỐT</p>
+            </div>
+            <div class="film">
+                <img src="./asset/img/im4.png" alt="">
+                <p class="text">QUỲNH HOA NHẤT DẠ</p>
+            </div>
+            <div class="film">
+                <img src="./asset/img/im1.png" alt="">
+                <p class="text">NHỮNG GÃ TRAI HƯ: CHƠI HAY BỊ XƠI</p>
+            </div>
+            <div class="film">
+                <img src="./asset/img/im5.png" alt="">
+                <p class="text">WICKED</p>
+            </div>
+            <div class="film">
+                <img src="./asset/img/im6.png" alt="">
+                <p class="text">YÊU NHƯ LẦN ĐẦU</p>
+            </div>
+            <div class="film">
+                <img src="./asset/img/im7.png" alt="">
+                <p class="text">TRANSFORMER MỘT</p>
+            </div>
+            <div class="film">
+                <img src="./asset/img/im8.png" alt="">
+                <p class="text">TRÀ</p>
+            </div>
+        </div>
+        <div class="cap">
+            <p>Khuyến mãi</p>
+        </div>
+        <div class="bd3">
+            <div class="new-item">
+                <div class="img4"><img src="./asset/img/img1.png" alt="" ></div>
+                <span>04/09/2019</span>
+                <p>SIÊU ƯU ĐÃI "PHIM THẬT HAY - COMBO THẬT ĐÃ" CHÍNH THỨC TRỞ LẠI</p>
+            </div>
+            <div class="new-item">
+                <div class="img4"><img src="./asset/img/img2.png" alt="" ></div>
+                <span>17/05/2019</span>
+                <p>Đồng giá 49k bộ phim hoạt hình "Những chú chó hoàng gia"</p>
+            </div>
+            <div class="new-item">
+                <div class="img4"><img src="./asset/img/img3.png" alt="" ></div>
+                <span>23/04/2019</span>
+                <p>XEM PHIM HAY HƯỞNG NGAY ƯU ĐÃI "ĂN THẢ GA - CHƠI CỰC ĐÃ"</p>
+            </div>
+        </div>
+        <div class="cap">
+            <p>Sự kiện</p>
+        </div>
+        <div class="bd3">
+            <div class="new-item">
+                <div class="img4"><img src="./asset/img/img4.png" alt="" ></div>
+                <span>21/05/2024</span>
+                <p>Chương trình phim hè 2024!</p>
+            </div>
+            <div class="new-item">
+                <div class="img4"><img src="./asset/img/img5.png" alt="" ></div>
+                <span>11/01/2024</span>
+                <p>Khai mạc Tuần lễ phim Iran tại Trung tâm phim Quốc gia</p>
+            </div>
+            <div class="new-item">
+                <div class="img4"><img src="./asset/img/img6.png" alt="" ></div>
+                <span>30/12/2023</span>
+                <p>Chúc mừng năm mới 2024!!!</p>
+            </div>
+        </div>
+        <div class="img5">
+            <img src="./asset/img/1.webp" alt="">
+        </div>
+        <div class="img5">
+            <img src="./asset/img/2.webp" alt="">
+        </div>
+        <div class="img5">
+            <img src="./asset/img/3.webp" alt="">
+        </div>
+        <div class="img5">
+            <img src="./asset/img/4..webp" alt="">
+        </div>
+        <div class="img5">
+            <img src="./asset/img/5.webp" alt="">
+        </div>
+        <div class="img5">
+            <img src="./asset/img/6.webp" alt="">
+        </div>
+        <div class="img5">
+            <img src="./asset/img/7.webp" alt="">
+        </div>
+        <div class="footer">
+            <div class="footer__navbar-top">
+                <a href="" class="footer__navbar-text">Chính sách</a>
+                <a href="./phimtheongay/09-06-2024.html" class="footer__navbar-text">Lịch chiếu</a>
+                <a href="" class="footer__navbar-text">Tin Tức</a>
+                <a href="" class="footer__navbar-text">Giá vé</a>
+                <a href="" class="footer__navbar-text">Hỏi đáp</a>
+                <a href="" class="footer__navbar-text">Liên hệ</a> 
+            </div>
+            <div class="icons">
+                <div class="icon"><i class="fa-brands fa-facebook" style="color: rgba(8, 65, 222, 0.881);"></i></div>
+                <div class="icon"><i class="fa-brands fa-tiktok" style="color: black;"></i></div>
+                <div class="icon"><i class="fa-brands fa-youtube" style="color: red;"></i></div>
+                <img src="./asset/icon/img7.png" alt="">
+                <img src="./asset/icon/img8.png" alt="">
+                <img src="./asset/icon/img9.png" alt="">
+            </div>
+            <div class="footer__navbar-mid">
+                <div class="footer__navbar-text" style="margin-bottom: 15px;">Cơ quan chủ quản: BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH</div>
+                <div class="footer__navbar-text" style="margin-bottom: 15px;">Bản quyền thuộc Trung tâm Chiếu phim Quốc gia.</div>
+                <div class="footer__navbar-text" style="margin-bottom: 15px;">Giấy phép số: 224/GP- TTĐT ngày 31/8/2010 - Chịu trách nhiệm: Vũ Đức Tùng – Giám đốc.</div>
+                <div class="footer__navbar-text" style="margin-bottom: 15px;">Địa chỉ: 87 Láng Hạ, Quận Ba Đình, Tp. Hà Nội - Điện thoại: 024.35141791</div>
+                <div class="footer__navbar-text" style="margin-top: 20px;margin-bottom: 20px;">Copyright 2023. NCC All Rights Reservered. Dev by Anvui.vn</div>
+            </div>
+        </div>
+        </div>
+        <script src="./asset/javascript/index.js"></script>
+        <script src="https://kit.fontawesome.com/3da37d66cd.js" crossorigin="anonymous"></script>
+        <script src="./asset/javascript/slide.js"></script>
+        <script>
+            const btregister = document.getElementsByClassName('btregister')[0];
+            const modaldangky = document.getElementsByClassName('modaldangky')[0];
+            const btclosedangky = document.getElementsByClassName('btclosedangky')[0];
+            btregister.addEventListener('click', ()=>{
+                modaldangky.classList.add('show');
+            });
+            btclosedangky.addEventListener('click', ()=>{
+                modaldangky.classList.remove('show');
+            });
+            const btlogin = document.getElementsByClassName('btlogin')[0];
+            const modaldangnhap = document.getElementsByClassName('modaldangnhap')[0];
+            const btclosedangnhap = document.getElementsByClassName('btclosedangnhap')[0];
+            btlogin.addEventListener('click', ()=>{
+                modaldangnhap.classList.add('show');
+            });
+            btclosedangnhap.addEventListener('click', ()=>{
+                modaldangnhap.classList.remove('show');
+            });
+        </script>
+</body>
+</html>

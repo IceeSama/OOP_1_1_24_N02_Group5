@@ -1,23 +1,86 @@
+package com.thanhhanh.beta.entity;
+
+import javax.persistence.*;
+
 @Entity
-public class Booking {
+@Table(name = "booking")
+public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer bookingId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "booking_id")
+    private int bookingId;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @Column(name = "user_id")
+    private int userId;
 
-    @ManyToOne
-    @JoinColumn(name = "schedule_id", nullable = false)
-    private Schedule schedule;
+    @Column(name = "schedule_id")
+    private int scheduleId;
 
-    @ManyToOne
-    @JoinColumn(name = "seat_id", nullable = false)
-    private Seat seat;
+    @Column(name = "seat_id")
+    private int seatId;
 
+    @Column(name = "price")
     private double price;
+
+    @Column(name = "seat_status")
     private int seatStatus;
 
-    // Getters and setters
+    public Book() {
+    }
+
+    public Book(int userId, int scheduleId, int seatId, double price, int seatStatus) {
+        this.userId = userId;
+        this.scheduleId = scheduleId;
+        this.seatId = seatId;
+        this.price = price;
+        this.seatStatus = seatStatus;
+    }
+
+    public int getBookingId() {
+        return bookingId;
+    }
+
+    public void setBookingId(int bookingId) {
+        this.bookingId = bookingId;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public int getScheduleId() {
+        return scheduleId;
+    }
+
+    public void setScheduleId(int scheduleId) {
+        this.scheduleId = scheduleId;
+    }
+
+    public int getSeatId() {
+        return seatId;
+    }
+
+    public void setSeatId(int seatId) {
+        this.seatId = seatId;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getSeatStatus() {
+        return seatStatus;
+    }
+
+    public void setSeatStatus(int seatStatus) {
+        this.seatStatus = seatStatus;
+    }
 }
