@@ -28,7 +28,7 @@ login
 home  
 ![Home](cinema_client/src/main/resources/static/images/home.png)   
 
-movie
+movie  
 ![movie](cinema_client/src/main/resources/static/images/movie.png)  
 
 branch  
